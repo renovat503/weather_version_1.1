@@ -1,4 +1,27 @@
-.day-text{
-    font-size: 20px;
-    display: block;
+.day-text {
+  font-size: 20px;
+  display: block;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+.weather-icon {
+  width: 100%;
+  height: 150px;
+  margin-top: 20px;
+}
+.icon-weather {
+  height: 100%;
+}
+.degree-text {
+  display: block;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.weather-desc {
+  display: block;
+  letter-spacing: 5px;
+}
+.card-wrapper {
+  width: 100%;
+  height: 100%;
 }

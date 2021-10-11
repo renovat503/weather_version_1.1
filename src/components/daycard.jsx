@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
+import sunny from '../images/sunny.svg';
 import '../styles/daycard.css'
 class DayCard extends React.Component {
     render() { 
-        return <div>
-            <div className="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
+        return <div className="card-wrapper">
+            
                     <div class="card">
                         <div class="card-body">
                             <span className="day-text">MON</span>
-                            
-                            
-                        </div>
-                    </div>
+                            <div className="weather-icon">
+                                <img  className="icon-weather"src={sunny}alt="..."/>
+                            </div>
+                            <span className="degree-text">15°</span>
+                            <span className="weather-desc">SUNNY</span>
                 </div>
+                </div>
+               
+                
             </div>
-        </div>;
     }
 }
  

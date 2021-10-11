@@ -42,8 +42,8 @@ class CityDetails extends React.Component {
                             </div>
                             <div className="feed-container">
                                 <img className="profile-pic"src={user1}/>
-                                <div className="name-text-container">
-                                        <div>
+                                <div >
+                                        <div className="image-name-container">
                                             <span className="tweet-name">Jane Smith </span>
                                             <img className="twitter-verified-icon"src="https://img.icons8.com/fluency/48/000000/verified-badge.png"/>
                                             <span className="tweet-username">@janesmith</span>
@@ -56,8 +56,18 @@ class CityDetails extends React.Component {
                             </div>
                             </div>
                             <div class="col">
-                                <div className="days-section">
-                                    <DayCard/>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <DayCard/>
+                                    </div>
+                                    <div class="col">
+                                        <DayCard/>
+                                    </div>
+                                    <div class="col">
+                                        <DayCard/>
+                                    </div>
+                                </div>
                                 </div>
                             </div>
                         </div>
