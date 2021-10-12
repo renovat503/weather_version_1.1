@@ -5,8 +5,6 @@ class DayCard extends React.Component {
     render() { 
         return <div className="card-wrapper">
             
-                    <div class="card">
-                        <div class="card-body">
                             <span className="day-text">MON</span>
                             <div className="weather-icon">
                                 <img  className="icon-weather"src={sunny}alt="..."/>
@@ -14,10 +12,6 @@ class DayCard extends React.Component {
                             <span className="degree-text">15°</span>
                             <span className="weather-desc">SUNNY</span>
                 </div>
-                </div>
-               
-                
-            </div>
     }
 }
  

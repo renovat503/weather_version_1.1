@@ -70,9 +70,82 @@
 .testo {
   width: 100%;
   height: 100%;
-  background-color: teal;
 }
 .image-name-container {
   position: absolute;
   left: 100px;
+}
+@media (max-width: 575.98px) { 
+
+  .profile-pic {
+    display: none;
+  }
+  .xsmall{
+    display: none;
+  }
+  .name-and-tweet {
+    position: relative;
+    left: -50px;
+  }
+
+ }
+ 
+@media (max-width: 767.98px) { 
+  .profile-pic {
+    display: none;
+  }
+  .xsmall{
+    display: none;
+  }
+  .name-and-tweet {
+    position: relative;
+    left: -50px;
+  }
+  .extra{
+    height:600px;
+    }
+}
+
+
+@media (max-width: 991.98px) {
+  .profile-pic {
+    display: none;
+  }
+  .name-and-tweet {
+    position: relative;
+    left: -50px;
+  }
+  .extra{
+    height:850px;
+    }
+  
+  }
+
+
+@media (max-width: 1199.98px) { 
+  .profile-pic {
+    display: none;
+  }
+  .name-and-tweet {
+    position: relative;
+    left: -50px;
+  }
+  .extra{
+    height:580px;
+    }
+ }
+
+
+@media (max-width: 1399.98px) {
+  .extra{
+    height:580px;
+    }
+ }
+ @media (max-width: 2000.98px) {
+  .extra{
+    height:250px;
+    }
+ }
+  .extra{
+  overflow:auto;
 }

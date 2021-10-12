@@ -1,21 +1,18 @@
 .day-text {
   font-size: 20px;
   display: block;
-  font-weight: bold;
   letter-spacing: 5px;
 }
 .weather-icon {
   width: 100%;
-  height: 150px;
   margin-top: 20px;
 }
 .icon-weather {
-  height: 100%;
+  height: 50%;
 }
 .degree-text {
   display: block;
   font-weight: bold;
-  margin-top: 20px;
 }
 .weather-desc {
   display: block;
@@ -24,4 +21,6 @@
 .card-wrapper {
   width: 100%;
   height: 100%;
+  border: 1px solid rgb(231, 230, 230);
+  border-radius: 10px;
 }

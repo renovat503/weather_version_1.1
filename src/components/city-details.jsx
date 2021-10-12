@@ -13,14 +13,14 @@ class CityDetails extends React.Component {
     render() { 
         return <div>
             <div className="main-container">
-            <div className="card mb-3" style={{borderRadius: 20}}>
+            <div className="card  mb-3" style={{borderRadius: 20}}>
             <img style={{borderTopRightRadius: 20,borderTopLeftRadius: 20}}src={france} className="card-img-top" alt="..."/>
-                <div className="card-body">
+                <div className="card-body extra">
                     <div className="card-body-container">
                     <div class="container">
                         <div class="row">
                             
-                            <div class="col-4 left-section">
+                            <div class="col-4  xsmall left-section">
                             <div class="container">
                                 <div class="row">
                                     <div class="col">
@@ -35,8 +35,8 @@ class CityDetails extends React.Component {
                                     <div class="col-2">
                                         <img className="profile-pic"src={user1}/>
                                     </div>
-                                    <div class="col">
-                                    <div>
+                                    <div class="col ">
+                                    <div className="name-and-tweet">
                                         <span className="tweet-name">Jane Smith </span>
                                         <img className="twitter-verified-icon"src="https://img.icons8.com/fluency/48/000000/verified-badge.png"/>
                                         <span className="tweet-username">@janesmith</span>
@@ -49,7 +49,7 @@ class CityDetails extends React.Component {
                                         <img className="profile-pic"src={user1}/>
                                     </div>
                                     <div class="col">
-                                    <div>
+                                    <div className="name-and-tweet">
                                         <span className="tweet-name">Jane Smith </span>
                                         <img className="twitter-verified-icon"src="https://img.icons8.com/fluency/48/000000/verified-badge.png"/>
                                         <span className="tweet-username">@janesmith</span>
@@ -58,24 +58,39 @@ class CityDetails extends React.Component {
                                     </div>
                                 </div>
                                 </div>
-                            
-
-
-
-                            
-                                
-                            </div>
+                             </div>
                             <div class="col">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col">
+                                    <div class="col-xxl-2 col-xl-2 col-lg-4 col-md-6 col-sm-6  mt-2  ">
+                                        <div className="testo">
                                         <DayCard/>
+                                        </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col-xxl-2 col-xl-2 col-lg-4 col-md-6 col-sm-6  mt-2 ">
+                                        <div className="testo">
                                         <DayCard/>
+                                        </div>
                                     </div>
-                                    <div class="col">
+                                    <div class="col-xxl-2 col-xl-2 col-lg-4 col-md-6 col-sm-6 mt-2 ">
+                                        <div className="testo">
                                         <DayCard/>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-2 col-xl-2 col-lg-4 col-md-6 col-sm-6  mt-2 ">
+                                    <div className="testo">
+                                    <DayCard/>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-2 col-xl-2 col-lg-4 col-md-6 col-sm-6  mt-2 ">
+                                        <div className="testo">
+                                            <DayCard/>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-2  col-xl-2 col-lg-4 col-md-6 col-sm-6  mt-2 ">
+                                        <div className="testo">
+                                            <DayCard/>
+                                        </div>
                                     </div>
                                 </div>
                                 </div>
