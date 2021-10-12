@@ -21,39 +21,49 @@ class CityDetails extends React.Component {
                         <div class="row">
                             
                             <div class="col-4 left-section">
-                            <div>
-                                <FontAwesomeIcon className = "twitter-icon"icon={['fab', 'twitter']} />
-                                <span className="twitter-feed">Twitter Feed</span>
-                                <span className="france">#France</span>
-                            </div>
-                            <div className="feed-container">
-                                <img className="profile-pic"src={user1}/>
-                                <div className="name-text-container">
-                                        <div>
-                                            <span className="tweet-name">Jane Smith </span>
-                                            <img className="twitter-verified-icon"src="https://img.icons8.com/fluency/48/000000/verified-badge.png"/>
-                                            <span className="tweet-username">@janesmith</span>
-                                        </div>
-                                        <div className="tweet-text-container">
-                                            <h6 className="tweet-text">Don't forget your sunscreen tomorrow,Amazing weather in paris!</h6>
-                                        </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                    <div>
+                                        <FontAwesomeIcon className = "twitter-icon"icon={['fab', 'twitter']} />
+                                        <span className="twitter-feed">Twitter Feed</span>
+                                        <span className="france">#France</span>
+                                    </div>
+                                    </div>
                                 </div>
-                                
-                            </div>
-                            <div className="feed-container">
-                                <img className="profile-pic"src={user1}/>
-                                <div >
-                                        <div className="image-name-container">
-                                            <span className="tweet-name">Jane Smith </span>
-                                            <img className="twitter-verified-icon"src="https://img.icons8.com/fluency/48/000000/verified-badge.png"/>
-                                            <span className="tweet-username">@janesmith</span>
-                                        </div>
-                                        <div className="tweet-text-container">
-                                            <h6 className="tweet-text">Don't forget your sunscreen tomorrow,Amazing weather in paris!</h6>
-                                        </div>
+                                <div class="row mt-3">
+                                    <div class="col-2">
+                                        <img className="profile-pic"src={user1}/>
+                                    </div>
+                                    <div class="col">
+                                    <div>
+                                        <span className="tweet-name">Jane Smith </span>
+                                        <img className="twitter-verified-icon"src="https://img.icons8.com/fluency/48/000000/verified-badge.png"/>
+                                        <span className="tweet-username">@janesmith</span>
+                                        <h6 className="tweet-text">Don't forget your sunscreen tomorrow,Amazing weather in paris!</h6>
+                                    </div>
+                                    </div>
                                 </div>
+                                <div class="row mt-3">
+                                    <div class="col-2">
+                                        <img className="profile-pic"src={user1}/>
+                                    </div>
+                                    <div class="col">
+                                    <div>
+                                        <span className="tweet-name">Jane Smith </span>
+                                        <img className="twitter-verified-icon"src="https://img.icons8.com/fluency/48/000000/verified-badge.png"/>
+                                        <span className="tweet-username">@janesmith</span>
+                                        <h6 className="tweet-text">Don't forget your sunscreen tomorrow,Amazing weather in paris!</h6>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
+                            
+
+
+
+                            
                                 
-                            </div>
                             </div>
                             <div class="col">
                             <div class="container">
