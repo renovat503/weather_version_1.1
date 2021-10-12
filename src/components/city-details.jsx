@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import france from '../images/france.png';
+import wallpaper from '../images/wallpaper3.jpg';
 import user1 from '../images/user1.png';
 import '../styles/city-details.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -14,7 +15,37 @@ class CityDetails extends React.Component {
         return <div>
             <div className="main-container">
             <div className="card  mb-3" style={{borderRadius: 20}}>
-            <img style={{borderTopRightRadius: 20,borderTopLeftRadius: 20}}src={france} className="card-img-top" alt="..."/>
+            <img style={{borderTopRightRadius: 20,borderTopLeftRadius: 20}}src={wallpaper} className="card-img-top" alt="..."/>
+            <div class="card-img-overlay">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                            <div class="container">
+                            <div class="row">
+                                <h6 className="degree-big">12°</h6>
+                                <span className="weather-desc-today">CLOUDY</span>
+                            </div>
+                            <div class="row mt-4 ">
+                                
+                                <div class="col border-right ">
+                                    <span className="humidity-wind" >HUMIDITY</span>
+                                    <span className="humidity-wind">64%</span>
+                                </div>
+                                <div class="col">
+                                    <span className="humidity-wind">WIND</span>
+                                    <span className="humidity-wind">12 K/M</span>
+                                
+                                </div>
+                            </div>
+                            </div>
+                    </div>
+                    <div class="col albelta-col">
+                        <span className="city-name">ALBELTA</span>
+                    </div>
+                </div>
+                </div>
+            </div>
                 <div className="card-body extra">
                     <div className="card-body-container">
                     <div class="container">
