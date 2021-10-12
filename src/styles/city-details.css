@@ -181,6 +181,7 @@
   }
   .extra{
     height:600px;
+    overflow:auto;
     }
 }
 
@@ -208,6 +209,7 @@
   }
   .extra{
     height:850px;
+    overflow:auto;
     }
   
   }
@@ -224,6 +226,7 @@
   }
   .extra{
     height:580px;
+    overflow:auto;
     }
  }
 
@@ -231,14 +234,15 @@
 @media  screen and (max-width: 1399.98px){
   
   .extra{
-    height:580px;
+    height:200px;
+    overflow:auto;
     }
  }
 
 
   
 .extra{
-    height:580px;
+    height: 250px;
     overflow:auto;
     }
  
