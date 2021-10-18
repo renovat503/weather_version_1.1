@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import sunny from '../images/sunny.svg';
+import React from 'react';
+import sunny from '../images/sunny2.svg';
+import rainy from '../images/rainy.svg';
 import '../styles/daycard.css'
 class DayCard extends React.Component {
     render() { 

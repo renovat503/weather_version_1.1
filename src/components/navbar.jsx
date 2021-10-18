@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import logo from '../images/Bootstrap_logo.png';
 import '../styles/navbar.css';
 class NavBar extends React.Component {
