@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollReveal from 'scrollreveal';
 import wallpaper from '../images/wallpaper3.jpg';
 import user1 from '../images/user1.png';
 import '../styles/city-details.css';
@@ -10,6 +11,11 @@ import DayCard from '../components/daycard.jsx'
 library.add(fab)
 
 class CityDetails extends React.Component {
+
+    componentDidMount() {
+        {ScrollReveal().reveal('.degree-big', { delay: 1000 })}
+        {ScrollReveal().reveal('.albelta-col', { delay: 1000 })}
+    }
        
     render() { 
         return <div>
@@ -23,6 +29,7 @@ class CityDetails extends React.Component {
                     <div className="col">
                             <div className="container">
                             <div className="row">
+                            
                                 <h6 className="degree-big">{this.props.temperature}°</h6>
                                 <span className="weather-desc-today">{this.props.description}</span>
                             </div>
