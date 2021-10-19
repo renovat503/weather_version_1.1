@@ -7,7 +7,7 @@ class DayCard extends React.Component {
             
                             <span className="day-text">MON</span>
                             <div className="weather-icon">
-                                <img  className="icon-weather"src={sunny}alt="..."/>
+                                <img  className="icon-weather"src="http://openweathermap.org/img/wn/13d@2x.png"alt="..."/>
                             </div>
                             <span className="degree-text">15°</span>
                             <span className="weather-desc">SUNNY</span>

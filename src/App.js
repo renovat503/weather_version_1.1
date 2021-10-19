@@ -1,9 +1,14 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import NavBar from './components/navbar';
 import CityDetails from './components/city-details';
+import Footers from './components/footers';
 
-function App() {
+
+class App extends React.Component {
+
+render(){
+  
   return (
     <div className="App">
       <div className="main">
@@ -12,8 +17,11 @@ function App() {
           <CityDetails/>
         </div>
       </div>
+      <Footers/>
     </div>
   );
+
+  }
 }
 
 export default App;

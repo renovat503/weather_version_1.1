@@ -76,14 +76,13 @@
   left: 100px;
 }
 
-
-.weather-desc-today{
+.weather-desc-today {
   color: white;
   font-size: 20px;
   letter-spacing: 15px;
   font-weight: lighter;
 }
-.city-name{
+.city-name {
   color: white;
   font-size: 40px;
   font-weight: bold;
@@ -91,70 +90,42 @@
   position: relative;
   top: 120px;
 }
-.city-wrapper{
+.city-wrapper {
   height: auto;
   width: auto;
   background-color: wheat;
 }
-.border-right{
+.border-right {
   border-right: 1.5px solid white;
 }
-.humidity-wind{
+.humidity-wind {
   color: white;
   display: block;
   font-size: 12px;
   letter-spacing: 5px;
 }
-.degree-big{
+.degree-big {
   color: white;
-  font-size:160px;
+  font-size: 160px;
 }
 
-
-
-
-
-
+.extra {
+  height: 340px;
+  overflow: auto;
+}
 
 /* Media querries */
 
-
-@media screen and (max-width: 575.98px){ 
-
-
-  .albelta-col{
-    position: relative;
-    top: 50px;
+@media (max-width: 578.99px) {
+  .extra {
+    height: 3240px !important;
   }
-  
-  .row-wrapper{
-    display: none;
-  }
-  
-  .humidity-wind{
-    display: none;
-  }
-
-  .profile-pic {
-    display: none;
-  }
-  .xsmall{
-    display: none;
-  }
-  .name-and-tweet {
-    position: relative;
-    left: -50px;
-  }
-
- }
- 
-@media screen and (max-width: 767.98px){ 
-  .degree-big{
+  .degree-big {
     color: white;
-    font-size:40px !important;
+    font-size: 80px !important;
   }
-  
-  .city-name{
+
+  .city-name {
     color: white;
     font-size: 40px !important;
     font-weight: bold;
@@ -162,36 +133,71 @@
     position: relative;
     top: 70px;
   }
- 
-  .humidity-wind{
+
+  .humidity-wind {
     display: none;
   }
   .profile-pic {
     display: none;
   }
-  .albelta-col{
+  .albelta-col {
     display: none;
   }
-  .xsmall{
+  .xsmall {
     display: none;
   }
   .name-and-tweet {
     position: relative;
     left: -50px;
   }
-  .extra{
-    height:600px;
-    overflow:auto;
-    }
 }
 
-
-@media screen and (max-width: 991.98px){
-  .degree-big{
+@media screen and (min-width: 567.98px) and (max-width: 767.98px) {
+  .degree-big {
     color: white;
-    font-size:80px !important;
+    font-size: 40px !important;
   }
-  .city-name{
+
+  .city-name {
+    color: white;
+    font-size: 40px !important;
+    font-weight: bold;
+    letter-spacing: 10px;
+    position: relative;
+    top: 70px;
+  }
+
+  .humidity-wind {
+    display: none;
+  }
+  .profile-pic {
+    display: none;
+  }
+  .albelta-col {
+    display: none;
+  }
+  .xsmall {
+    display: none;
+  }
+  .name-and-tweet {
+    position: relative;
+    left: -50px;
+  }
+  .extra {
+    height: 950px !important;
+  }
+}
+
+@media screen and (min-width: 767.98px) and (max-width: 991.98px) {
+  .extra {
+    height: 640px !important;
+  }
+
+  .degree-big {
+    color: white;
+    font-size: 80px !important;
+  }
+  .city-name {
     color: white;
     font-size: 40px;
     font-weight: bold;
@@ -199,7 +205,7 @@
     position: relative;
     top: 70px;
   }
-  
+
   .profile-pic {
     display: none;
   }
@@ -207,16 +213,12 @@
     position: relative;
     left: -50px;
   }
-  .extra{
-    height:850px;
-    overflow:auto;
-    }
-  
+}
+
+@media screen and (min-width: 967.98px) and (max-width: 1199.98px) {
+  .extra {
+    height: 640px !important;
   }
-
-
-@media  screen and (max-width: 1199.98px){ 
-  
   .profile-pic {
     display: none;
   }
@@ -224,25 +226,15 @@
     position: relative;
     left: -50px;
   }
-  .extra{
-    height:580px;
-    overflow:auto;
-    }
- }
+  .extra {
+    height: 580px;
+    overflow: auto;
+  }
+}
 
-
-@media  screen and (max-width: 1399.98px){
-  
-  .extra{
-    height:200px;
-    overflow:auto;
-    }
- }
-
-
-  
-.extra{
-    height: 250px;
-    overflow:auto;
-    }
- 
+@media screen and (min-width: 1199.98px) and (max-width: 1399.98px) {
+  .extra {
+    height: 300px;
+    overflow: auto;
+  }
+}

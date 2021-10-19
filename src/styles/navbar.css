@@ -3,3 +3,9 @@
   right: 40px;
   top: 15px;
 }
+.cust {
+  float: right;
+  margin-left: 90px;
+  margin-top: 10px;
+  width: 220px;
+}
