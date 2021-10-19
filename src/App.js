@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from './components/navbar';
 import CityDetails from './components/city-details';
 import Footers from './components/footers';
+import { data } from 'jquery';
 
 
 class App extends React.Component {
@@ -18,7 +19,8 @@ class App extends React.Component {
     humidity:undefined,
     wind_speed:undefined,
     description:undefined,
-    icon : undefined
+    icon : undefined,
+    daily_weather : undefined
 
   }
 
@@ -48,7 +50,8 @@ class App extends React.Component {
       humidity:data.current.humidity,
       wind_speed:data.current.wind_speed,
       description : data.current.weather[0].description.toUpperCase(),
-      icon : data2.weather[0].icon
+      icon : data2.weather[0].icon,
+      daily_weather:data.daily
     })
   }
 
@@ -73,10 +76,12 @@ class App extends React.Component {
     clearInterval(this.timerID);
   }
 
+
   render(){
 
     const icon = `http://openweathermap.org/img/wn/${this.state.icon}@2x.png`;
-    const { lat,lon,temperatureF,humidity,wind_speed,description} = this.state;
+    const { lat,lon,temperatureF,humidity,wind_speed,description,daily_weather,city} = this.state;
+
   return (
     <div className="App">
       <div className="main">
@@ -88,11 +93,12 @@ class App extends React.Component {
           longitude ={lon}
           humidity={humidity}
           wind_speed={wind_speed}
-          latitude={this.state.lat}
-          longitude={this.state.lon}
+          latitude={lat}
+          longitude={lon}
           description={description}
-          city={this.state.city}
-          icon={icon}/>
+          city={city}
+          icon={icon}
+          dailyWeather={daily_weather}/>
         </div>
       </div>
       <Footers/>

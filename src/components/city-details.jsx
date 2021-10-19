@@ -15,6 +15,7 @@ library.add(fab)
 
 class CityDetails extends React.Component {
 
+
     componentDidMount() {
         {ScrollReveal().reveal('.degree-big', { delay: 1000 })}
         {ScrollReveal().reveal('.albelta-col', { delay: 1000 })}
@@ -28,7 +29,7 @@ class CityDetails extends React.Component {
 
         let alert 
 
-        if(this.props.temperature > 10){
+        if(this.props.temperature > 5){
 
 
             alert = <div id="alert"class="alert alert-success alert-dismissible fade show" role="alert">
@@ -43,10 +44,6 @@ class CityDetails extends React.Component {
                     </div>
 
         }
-
-        
-
-
 
         return <div>
             <div className="main-container">
@@ -131,35 +128,15 @@ class CityDetails extends React.Component {
                             <div className="col">
                             <div className="container">
                                 <div className="row">
-                                    <div className="col-xxl-2 col-xl-2 col-lg-4 col-md-6 col-sm-6  mt-2 ">
-                                        <div className="testo">
-                                        <DayCard/>
-                                        </div>
-                                    </div>
-                                    <div className="col-xxl-2 col-xl-2 col-lg-4 col-md-6 col-sm-6  mt-2 ">
-                                        <div className="testo">
-                                        <DayCard/>
-                                        </div>
-                                    </div>
-                                    <div className="col-xxl-2 col-xl-2 col-lg-4 col-md-6 col-sm-6 mt-2 ">
-                                        <div className="testo">
-                                        <DayCard/>
-                                        </div>
-                                    </div>
-                                    <div className="col-xxl-2 col-xl-2 col-lg-4 col-md-6 col-sm-6  mt-2 ">
-                                    <div className="testo">
-                                    <DayCard/>
-                                        </div>
-                                    </div>
-                                    <div className="col-xxl-2 col-xl-2 col-lg-4 col-md-6 col-sm-6  mt-2 ">
-                                        <div className="testo">
-                                            <DayCard/>
-                                        </div>
-                                    </div>
-                                    <div className="col-xxl-2  col-xl-2 col-lg-4 col-md-6 col-sm-6  mt-2 ">
-                                        <div className="testo">
-                                            <DayCard/>
-                                        </div>
+
+                                {this.props.dailyWeather ? this.props.dailyWeather.map(day => <div className="col-xxl-2 col-xl-2 col-lg-4 col-md-6 col-sm-6  mt-2 ">
+                                                                    <DayCard icon={day.weather[0].icon} 
+                                                                             description={day.weather[0].main.toUpperCase()} 
+                                                                             temperature={day.temp.day}/>
+                                                                </div> ) : <div class="spinner-border text-info" role="status">
+                                                                                <span class="visually-hidden">Loading...</span>
+                                                                            </div>}
+                                    
                                     </div>
                                      </div>
                                 </div>
@@ -170,7 +147,6 @@ class CityDetails extends React.Component {
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     }
 }
