@@ -10,6 +10,7 @@ import DayCard from '../components/daycard.jsx'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'jquery/dist/jquery.min.js'
 import 'bootstrap/dist/js/bootstrap.min.js'
+import Model from '../components/model'
 
 library.add(fab)
 
@@ -23,6 +24,9 @@ class CityDetails extends React.Component {
 
     handleDismiss=()=>{
         document.getElementById('alert').style.display='none';
+    }
+    handleClick=()=>{
+        alert("clicked");
     }
        
     render() { 
@@ -56,7 +60,7 @@ class CityDetails extends React.Component {
                     <div className="col">
                             <div className="container">
                             <div className="row">
-                            
+                                <Model/>
                                 <h6 className="degree-big">{this.props.temperature}°</h6>
                                 <span className="weather-desc-today">{this.props.description}</span>
                             </div>
@@ -130,7 +134,8 @@ class CityDetails extends React.Component {
                                 <div className="row">
 
                                 {this.props.dailyWeather ? this.props.dailyWeather.map(day => <div className="col-xxl-2 col-xl-2 col-lg-4 col-md-6 col-sm-6  mt-2 ">
-                                                                    <DayCard icon={day.weather[0].icon} 
+                                                                    <DayCard onClick={this.handleClick}
+                                                                             icon={day.weather[0].icon} 
                                                                              description={day.weather[0].main.toUpperCase()} 
                                                                              temperature={day.temp.day}/>
                                                                 </div> ) : <div class="spinner-border text-info" role="status">

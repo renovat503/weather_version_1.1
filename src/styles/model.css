@@ -1,0 +1,10 @@
+.butt{
+    position: absolute;
+    left: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color:rgba(0, 247, 255, 0.685);
+    border : 1px solid rgba(0, 247, 255, 0.685);
+    font-weight: bolder;
+}
