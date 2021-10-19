@@ -36,18 +36,18 @@ class App extends React.Component {
     const api_call2 = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=54ab43f1231a24a187a91bee0cdbc6a7&units=metric`);
         const data2 = await api_call2.json();
 
-    //console.log(data);   
+    console.log(data);   
     console.log(data2);
 
     this.setState({
       lat: latitude,
       lon: longitude,
       city: data2.name.toUpperCase(),
-      temperatureF:data2.main.temp,
-      icon: data2.weather[0].icon,
-      humidity:0,
-      wind_speed:data2.wind.speed,
-      description : data2.weather[0].description.toUpperCase(),
+      temperatureF:data.current.temp,
+      icon: data.current.weather[0].icon,
+      humidity:data.current.humidity,
+      wind_speed:data.current.wind_speed,
+      description : data.current.weather[0].description.toUpperCase(),
       icon : data2.weather[0].icon
     })
   }

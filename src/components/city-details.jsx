@@ -7,6 +7,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import DayCard from '../components/daycard.jsx'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'jquery/dist/jquery.min.js'
+import 'bootstrap/dist/js/bootstrap.min.js'
 
 library.add(fab)
 
@@ -16,14 +19,41 @@ class CityDetails extends React.Component {
         {ScrollReveal().reveal('.degree-big', { delay: 1000 })}
         {ScrollReveal().reveal('.albelta-col', { delay: 1000 })}
     }
+
+    handleDismiss=()=>{
+        document.getElementById('alert').style.display='none';
+    }
        
     render() { 
+
+        let alert 
+
+        if(this.props.temperature > 10){
+
+
+            alert = <div id="alert"class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>Acceptable Temperature !</strong> You should check in on some of those fields below.
+                        <button onClick={this.handleDismiss}type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+        }else{
+
+            alert = <div id="alert"class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                        <button onClick={this.handleDismiss} type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+
+        }
+
+        
+
+
+
         return <div>
             <div className="main-container">
+            {alert}
             <div className="card  mb-3" style={{borderRadius: 20}}>
             <img style={{borderTopRightRadius: 20,borderTopLeftRadius: 20}}src={wallpaper} className="card-img-top" alt="..."/>
             <div className="card-img-overlay">
-
             <div className="container">
                 <div className="row">
                     <div className="col">
@@ -131,8 +161,9 @@ class CityDetails extends React.Component {
                                             <DayCard/>
                                         </div>
                                     </div>
+                                     </div>
                                 </div>
-                                </div>
+
                             </div>
                         </div>
                         </div>
