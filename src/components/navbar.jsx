@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import React, { Component } from 'react';
-import logo from '../images/u.png';
-=======
 import React from 'react';
-import logo from '../images/Bootstrap_logo.png';
->>>>>>> 15270700c9c96107ffe349c656270827774367e6
+import logo from '../images/u.png';
 import '../styles/navbar.css';
 
 class NavBar extends React.Component {

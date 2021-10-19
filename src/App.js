@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import './App.css';
 import NavBar from './components/navbar';
@@ -8,17 +7,6 @@ import Footers from './components/footers';
 
 class App extends React.Component {
 
-render(){
-  
-=======
-import React, { Component } from 'react';
-import './App.css';
-import NavBar from './components/navbar';
-import CityDetails from './components/city-details';
-import Footer from './components/footer';
-
-
-class App extends Component {
 
   state = {
     lat: undefined,
@@ -48,19 +36,19 @@ class App extends Component {
     const api_call2 = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=54ab43f1231a24a187a91bee0cdbc6a7`);
         const data2 = await api_call2.json();
 
-    console.log(data);   
+    //console.log(data);   
     console.log(data2);
 
     this.setState({
       lat: latitude,
       lon: longitude,
       city: data2.name.toUpperCase(),
-      temperatureF:data.current.temp,
-      icon: data.current.weather[0].icon,
-      humidity:data.current.humidity,
-      wind_speed:data.current.wind_speed,
-      description : data.current.weather[0].main.toUpperCase(),
-      icon : data.current.weather[0].icon
+      temperatureF:data2.main.temp,
+      icon: data2.weather[0].icon,
+      humidity:0,
+      wind_speed:data2.wind.speed,
+      description : data2.weather[0].description.toUpperCase(),
+      icon : data2.weather[0].icon
     })
   }
 
@@ -77,7 +65,7 @@ class App extends Component {
     this.timerID = setInterval(        
       () => 
       this.getWeather(this.state.lat, this.state.lon),
-      60000
+      600000
     );
   }
 
@@ -89,7 +77,6 @@ class App extends Component {
 
     const icon = `http://openweathermap.org/img/wn/${this.state.icon}@2x.png`;
     const { lat,lon,temperatureF,humidity,wind_speed,description} = this.state;
->>>>>>> 15270700c9c96107ffe349c656270827774367e6
   return (
     <div className="App">
       <div className="main">
@@ -108,16 +95,12 @@ class App extends Component {
           icon={icon}/>
         </div>
       </div>
-<<<<<<< HEAD
       <Footers/>
-=======
-      <Footer/>
->>>>>>> 15270700c9c96107ffe349c656270827774367e6
     </div>
   );
 
   }
 }
-}
+
 
 export default App;
