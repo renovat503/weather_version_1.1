@@ -11,7 +11,7 @@ class DayCard extends React.Component {
                             <div className="weather-icon">
                                 <img  className="icon-weather"src={icon}alt="..."/>
                             </div>
-                            <span className="degree-text">{temperature}</span>
+                            <span className="degree-text">{Math.round(temperature + 32)}°</span>
                             <span className="weather-desc">{description}</span>
                 </div>
     }

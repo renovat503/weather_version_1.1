@@ -1,9 +1,7 @@
 import React from 'react';
 import ScrollReveal from 'scrollreveal';
 import wallpaper from '../images/wallpaper3.jpg';
-import user1 from '../images/user1.png';
 import '../styles/city-details.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import DayCard from '../components/daycard.jsx'
@@ -76,35 +74,6 @@ handleDaysTest=(daily)=>{
 
   
   }
-     
- 
- 
- 
- 
-    //Handling Days
-
-  handleDays=(day)=>{
-
-  const arr = ['MON','TUE','WED','THU','FRI','SAT','SUN'];
-  let index = arr.indexOf(day);
-
-  const secondPart = arr.slice(index+1);
-  let firstPart = [];
-
-  for(let item of arr){
-    if(item !== day){
-
-      firstPart.push(item);
-
-    }else{
-      break;
-    }
-
-  }
-
-  const week = secondPart.concat(firstPart);
-  return week;
-}
        
     render() { 
 
@@ -125,7 +94,7 @@ handleDaysTest=(daily)=>{
                             <div className="container">
                             <div className="row">
                                 <Model data={this.props.dailyWeather}/>
-                                <h6 className="degree-big">{this.props.temperature}°</h6>
+                                <h6 className="degree-big">{Math.round(this.props.temperature)}°</h6>
                                 <span className="weather-desc-today">{this.props.description}</span>
                             </div>
                             <div className="row mt-4 ">

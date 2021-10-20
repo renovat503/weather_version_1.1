@@ -44,7 +44,7 @@ class App extends React.Component {
       lat: latitude,
       lon: longitude,
       city: data2.name.toUpperCase(),
-      temperatureF:data.current.temp,
+      temperatureF:data.current.temp + 32,
       icon: data.current.weather[0].icon,
       humidity:data.current.humidity,
       wind_speed:data.current.wind_speed,

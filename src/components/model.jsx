@@ -70,7 +70,7 @@ class Modal extends React.Component {
                         {this.state.data && this.state.data.map(day=>
                             <div className="card-custom">
                                 <span className="hour">6:00 PM</span>
-                                <span className="hour bold">{day.temp}°</span>
+                                <span className="hour bold">{Math.round(day.temp + 32)}°</span>
                                 <img className="model-icon"src={`http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`}/>
                                 <span className="hour italic">{day.weather[0].description}</span>
                                 
