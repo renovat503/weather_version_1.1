@@ -14,8 +14,7 @@ class Modal extends React.Component {
           navigator.geolocation.getCurrentPosition(resolve, reject);
         });    
       }
-      
-      
+
       getWeather = async (latitude, longitude) => { 
         const api_call = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=54ab43f1231a24a187a91bee0cdbc6a7&units=metric`);
         const data = await api_call.json(); 

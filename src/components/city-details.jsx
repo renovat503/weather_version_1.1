@@ -31,23 +31,11 @@ class CityDetails extends React.Component {
        
     render() { 
 
-        let alert 
-
-        if(this.props.temperature > 5){
-
-
-            alert = <div id="alert"class="alert alert-success alert-dismissible fade show" role="alert">
-                        <strong>Acceptable Temperature !</strong> You should check in on some of those fields below.
+   let alert = <div id="alert"class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>Welcom to Umbrella !</strong> No alert to show at the Moment. Be safe Out there !
                         <button onClick={this.handleDismiss}type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
-        }else{
-
-            alert = <div id="alert"class="alert alert-danger alert-dismissible fade show" role="alert">
-                        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-                        <button onClick={this.handleDismiss} type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-
-        }
+    
 
         return <div>
             <div className="main-container">
@@ -80,7 +68,6 @@ class CityDetails extends React.Component {
                     </div>
                     <div className="col albelta-col">
                         <span className="city-name">{this.props.city}</span>
-                        <img src={this.props.icon}alt="..."/>
                     </div>
                 </div>
                 </div>
@@ -89,46 +76,6 @@ class CityDetails extends React.Component {
                     <div className="card-body-container">
                     <div className="container">
                         <div className="row">
-                            
-                            <div className="col-4  xsmall left-section">
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col">
-                                    <div>
-                                        <FontAwesomeIcon className = "twitter-icon"icon={['fab', 'twitter']} />
-                                        <span className="twitter-feed">Tweet feeds</span>
-                                        <span className="france">#France</span>
-                                    </div>
-                                    </div>
-                                </div>
-                                <div className="row mt-3">
-                                    <div className="col-2">
-                                        <img className="profile-pic"src={user1}/>
-                                    </div>
-                                    <div className="col ">
-                                    <div className="name-and-tweet">
-                                        <span className="tweet-name">Jane Smith </span>
-                                        <img className="twitter-verified-icon"src="https://img.icons8.com/fluency/48/000000/verified-badge.png"/>
-                                        <span className="tweet-username">@janesmith</span>
-                                        <h6 className="tweet-text">Don't forget your sunscreen tomorrow,Amazing weather in paris!</h6>
-                                    </div>
-                                    </div>
-                                </div>
-                                <div className="row mt-3">
-                                    <div className="col-2">
-                                        <img className="profile-pic"src={user1}/>
-                                    </div>
-                                    <div className="col">
-                                    <div className="name-and-tweet">
-                                        <span className="tweet-name">Jane Smith </span>
-                                        <img className="twitter-verified-icon"src="https://img.icons8.com/fluency/48/000000/verified-badge.png"/>
-                                        <span className="tweet-username">@janesmith</span>
-                                        <h6 className="tweet-text">Don't forget your sunscreen tomorrow,Amazing weather in paris!</h6>
-                                    </div>
-                                    </div>
-                                </div>
-                                </div>
-                             </div>
                             <div className="col">
                             <div className="container">
                                 <div className="row">
@@ -138,7 +85,7 @@ class CityDetails extends React.Component {
                                                                              icon={day.weather[0].icon} 
                                                                              description={day.weather[0].main.toUpperCase()} 
                                                                              temperature={day.temp.day}/>
-                                                                </div> ) : <div class="spinner-border text-info" role="status">
+                                                                </div>) : <div class="spinner-border text-info" role="status">
                                                                                 <span class="visually-hidden">Loading...</span>
                                                                             </div>}
                                     

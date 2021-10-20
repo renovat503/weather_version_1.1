@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/daycard.css'
+import '../styles/daycard.css';
 class DayCard extends React.Component {
     render() { 
 
