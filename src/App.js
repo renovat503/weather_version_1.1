@@ -3,7 +3,6 @@ import './App.css';
 import NavBar from './components/navbar';
 import CityDetails from './components/city-details';
 import Footers from './components/footers';
-import { data } from 'jquery';
 
 
 class App extends React.Component {

@@ -60,7 +60,7 @@ class CityDetails extends React.Component {
                     <div className="col">
                             <div className="container">
                             <div className="row">
-                                <Model/>
+                                <Model data={this.props.dailyWeather}/>
                                 <h6 className="degree-big">{this.props.temperature}°</h6>
                                 <span className="weather-desc-today">{this.props.description}</span>
                             </div>
