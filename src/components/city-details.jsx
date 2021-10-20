@@ -16,7 +16,8 @@ library.add(fab)
 
 class CityDetails extends React.Component {
 
-
+//WARNING! To be deprecated in React v17. Use componentDidMount instead.
+    
     componentDidMount() {
         {ScrollReveal().reveal('.degree-big', { delay: 1000 })}
         {ScrollReveal().reveal('.albelta-col', { delay: 1000 })}
@@ -28,15 +29,90 @@ class CityDetails extends React.Component {
     handleClick=()=>{
         alert("clicked");
     }
+
+
+ 
+
+
+
+//Handling Days TESTING
+
+handleDaysTest=(daily)=>{
+
+    const arr = ['MON','TUE','WED','THU','FRI','SAT','SUN','MON','TUE','WED','THU','FRI','SAT','SUN'];
+    const d = new Date();
+    let today = d.getDay();
+    let finalIndex
+   
+    if(daily === 0){
+        finalIndex = arr[today];
+    }else if(daily === 1){
+        finalIndex = arr[today + 1];
+
+    }else if(daily === 2){
+        finalIndex = arr[today + 2];
+
+    }else if(daily === 3){
+        finalIndex = arr[today + 3];
+
+    }else if(daily === 4){
+        finalIndex = arr[today + 4];
+
+    }else if(daily === 5){
+        finalIndex = arr[today + 5];
+
+    }else if(daily === 6){
+        finalIndex = arr[today + 6];
+
+    }else if(daily === 7){
+        finalIndex = arr[today + 7];
+
+    }
+
+   
+    return finalIndex;
+        
+
+
+  
+  }
+     
+ 
+ 
+ 
+ 
+    //Handling Days
+
+  handleDays=(day)=>{
+
+  const arr = ['MON','TUE','WED','THU','FRI','SAT','SUN'];
+  let index = arr.indexOf(day);
+
+  const secondPart = arr.slice(index+1);
+  let firstPart = [];
+
+  for(let item of arr){
+    if(item !== day){
+
+      firstPart.push(item);
+
+    }else{
+      break;
+    }
+
+  }
+
+  const week = secondPart.concat(firstPart);
+  return week;
+}
        
     render() { 
 
+
    let alert = <div id="alert"class="alert alert-success alert-dismissible fade show" role="alert">
-                        <strong>Welcom to Umbrella !</strong> No alert to show at the Moment. Be safe Out there !
+                        <strong>Welcom to Umbrella !</strong> No alert to show at this Moment. Be safe Out there !
                         <button onClick={this.handleDismiss}type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
-    
-
         return <div>
             <div className="main-container">
             {alert}
@@ -80,8 +156,8 @@ class CityDetails extends React.Component {
                             <div className="container">
                                 <div className="row">
 
-                                {this.props.dailyWeather ? this.props.dailyWeather.map(day => <div className="col-xxl-2 col-xl-2 col-lg-4 col-md-6 col-sm-6  mt-2 ">
-                                                                    <DayCard onClick={this.handleClick}
+                                {this.props.dailyWeather ? this.props.dailyWeather.map((day,index)=> <div className="col-xxl-2 col-xl-2 col-lg-4 col-md-6 col-sm-6  mt-2 ">
+                                                                    <DayCard displayDay={()=>this.handleDaysTest(index)}
                                                                              icon={day.weather[0].icon} 
                                                                              description={day.weather[0].main.toUpperCase()} 
                                                                              temperature={day.temp.day}/>

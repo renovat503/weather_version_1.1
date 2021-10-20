@@ -29,6 +29,7 @@ class Modal extends React.Component {
       }
     
       componentDidMount() {
+
         this.getPosition()
         .then((position) => {      
           this.getWeather(position.coords.latitude, position.coords.longitude)
@@ -57,7 +58,6 @@ class Modal extends React.Component {
             <button type="button" className="butt" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
             +
             </button>
-
             <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div className="modal-dialog">
                 <div className="modal-content">
