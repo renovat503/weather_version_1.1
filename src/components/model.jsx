@@ -56,7 +56,7 @@ class Modal extends React.Component {
     render() { 
         return <div className="model-main-wrapper">
             <button type="button" className="butt" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            +
+            More
             </button>
             <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div className="modal-dialog">
