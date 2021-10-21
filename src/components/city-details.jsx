@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'jquery/dist/jquery.min.js'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import Model from '../components/model'
+import { now } from 'jquery';
 
 library.add(fab)
 
@@ -74,6 +75,16 @@ handleDaysTest=(daily)=>{
 
   
   }
+
+  displayDate = () =>{
+    let today = new Date();
+    let week = ['MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY','SUNDAY'];
+    let months = ['JANUARY','FEBRUARY','MARCH','APRIL','MAY','JUNE','JULY','AUGUST','SEPTEMBER','OCTOBER','NOVEMBER','DECEMBER'];
+    let currentDay = week[today.getDay() - 1];
+    let currentMonth = months[today.getMonth()];
+    let date = currentDay +' '+currentMonth +' '+today.getDate()+' '+ today.getFullYear();
+    return date;
+  }
        
     render() { 
 
@@ -113,6 +124,7 @@ handleDaysTest=(daily)=>{
                     </div>
                     <div className="col albelta-col">
                         <span className="city-name">{this.props.city}</span>
+                        <span className="today-date">{this.displayDate()}</span>
                     </div>
                 </div>
                 </div>

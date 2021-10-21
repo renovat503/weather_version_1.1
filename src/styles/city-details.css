@@ -104,6 +104,13 @@
   font-size: 12px;
   letter-spacing: 5px;
 }
+.today-date {
+  color: white;
+  display: block;
+  font-size: 12px;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
 .degree-big {
   color: white;
   font-size: 160px;
